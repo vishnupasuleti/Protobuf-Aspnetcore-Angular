@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+message Employee {
+   string FirstName = 1;
+   string LastName = 2;
+   string FootballClub = 3;
+   string Position = 4;
+   string Country = 5;
+   int32  Age = 6;
+}
+
+message EmployeeCollection{
+  repeated Employee Employees = 1;
+}

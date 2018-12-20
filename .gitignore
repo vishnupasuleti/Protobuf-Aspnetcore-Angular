@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+/ProtobufDemoWeb/bin/Debug/netcoreapp2.1
+/ProtobufDemoWeb/obj/Debug/netcoreapp2.1
+/ProtobufDemoWeb/obj
+/ProtobufDemoClient/package-lock.json
