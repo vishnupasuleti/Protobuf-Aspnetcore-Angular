@@ -1,5 +1,7 @@
 # ProtobufDemoClient
 
+[![Build Status](https://vsm123.visualstudio.com/Development/_apis/build/status/Angular?branchName=master)](https://vsm123.visualstudio.com/Development/_build/latest?definitionId=9?branchName=master)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
 ## Development server
