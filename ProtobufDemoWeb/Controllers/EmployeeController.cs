@@ -9,7 +9,7 @@ namespace ProtobufDemoWeb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Produces(AppConstants.PROTO_MEDIA_TYPE)]
+    //[Produces(AppConstants.PROTO_MEDIA_TYPE)]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;

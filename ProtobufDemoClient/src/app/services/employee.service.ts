@@ -10,8 +10,8 @@ export class EmployeeService {
 
     public getAll(): Promise<IEmployee[]> {
 
-        return this.http.get("https://localhost:5001/api/Employee/all", { responseType: ResponseContentType.ArrayBuffer }).toPromise().then(data => {
-            return EmployeeCollection.decode(new Uint8Array(data.arrayBuffer())).Employees;
+        return this.http.get("https://localhost:5001/api/Employee/all").toPromise().then(data => {
+            return data.json().Employees;
         });
 
     }

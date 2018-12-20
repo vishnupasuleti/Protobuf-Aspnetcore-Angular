@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Serialization;
 using ProtobufDemoWeb.Services;
 
 namespace ProtobufDemoWeb
@@ -29,7 +30,11 @@ namespace ProtobufDemoWeb
             services.AddMvc(options=> {
                 options.InputFormatters.Add(new ProtobufInputFormatter());
                 options.OutputFormatters.Add(new ProtobufOutputFormatter());
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            })
+             .AddJsonOptions(options => 
+        options.SerializerSettings.ContractResolver
+         = new DefaultContractResolver())
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddTransient<IEmployeeService, EmployeeService>();
         }
